@@ -13,6 +13,9 @@ public class App
     {
        ApplicationContext con=new ClassPathXmlApplicationContext("com/basic/Spring/config.xml");
        beans ob=(beans)con.getBean("emp");
-       System.out.println(ob);
+       person obs=(person) con.getBean("pr");
+       System.out.println(obs);
+       
+       //System.out.println(ob);
     }
 }

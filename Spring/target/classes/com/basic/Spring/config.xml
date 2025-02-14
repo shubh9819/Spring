@@ -4,6 +4,59 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        <!-- settr injection -->
+        <bean name="pass"  class="com.basic.Spring.Passport">
+        <property name="no" value="12345"></property>
+        <property name="validyear" value="2025"></property>
+        
+        </bean>
+        
+        <bean name="adds" class="com.basic.Spring.Address">
+        <property name="roomno" value="144"></property>
+                <property name="city" value="mumbai"></property>
+                <property name="pincode" value="14"></property>
+        
+        </bean>
+        
+        
+        <bean name ="pr" class="com.basic.Spring.person">
+        <property name="id" value="12"></property>
+         <property name="name" value="shubam"></property>
+          <property name="age" value="23"></property>
+           <property name="phno" >
+           <list>
+           <value>343434</value>
+             <value>434</value>
+               <value>3434</value>
+           
+           
+           </list>
+           </property>
+           <property name="hobbies">
+           <set>
+           <value>Swimming  </value>
+            <value>Running  </value>
+           </set>
+           
+           </property>
+           
+           <property name="cards">
+           <map>
+           <entry key="1222" value="hdfc"></entry>
+              <entry key="12" value="bank of baroda"></entry>
+           </map>
+           </property>
+           <property name="pass">
+           <ref bean="pass"/>
+           </property>
+           <property name="add">
+           <ref bean="adds"/>
+           </property>
+           
+        
+        
+        
+        </bean>
         
         <bean name="emp" class="com.basic.Spring.beans">
         <constructor-arg index="0" value="155"></constructor-arg>
