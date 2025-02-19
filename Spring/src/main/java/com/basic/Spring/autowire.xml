@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        <!-- setter injection -->
+        <bean name="fac"  class="com.basic.Spring.faculty">
+        <property name="fid" value="12345"></property>
+        <property name="name" value="rahul"></property>
+        <property name="course" value="java"></property>
+        
+        </bean>
+        
+        <bean name="stud" class="com.basic.Spring.student">
+        <property name="id" value="144"></property>
+                <property name="name" value="alok"></property>
+                 <property name="fac">
+           <ref bean="fac"/> 
+            </property> 
+          
+           <property name="add">
+           <ref bean="add"/>
+           </property>
+        
+        </bean>
+        
+        
+        <bean name ="add" class="com.basic.Spring.Address1">
+        <property name="roomno" value="12"></property>
+         <property name="city" value="shubam"></property>
+          <property name="pincode" value="23"></property>
+          
+       
+           
+        
+        </bean>
+     
+        
+        </beans>
