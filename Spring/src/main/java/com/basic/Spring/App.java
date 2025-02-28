@@ -9,8 +9,11 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class App 
 {
+	
+	
     public static void main( String[] args )
     {
+    	
        ApplicationContext con=new ClassPathXmlApplicationContext("com/basic/Spring/config.xml");
        beans ob=(beans)con.getBean("emp");
        person obs=(person) con.getBean("pr");

@@ -60,9 +60,9 @@
         
         <bean name="emp" class="com.basic.Spring.beans">
         <constructor-arg index="0" value="155"></constructor-arg>
-                <constructor-arg index="1" value="shubham"></constructor-arg>
+                <constructor-arg index="1" value="shubham"/>
         
-                <constructor-arg index="2" value="123300"></constructor-arg>
+                <constructor-arg index="2" value="123300"/>
         
         </bean>
         
